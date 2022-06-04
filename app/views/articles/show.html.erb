@@ -1,40 +1,12 @@
-<h1><%= @article.title %></h1>
-<p><%= @article.author %></p>
-<p><%= @article.body %></p>
+<h2 class="text-2xl font-bold mb-2"><%= @article.title %></h2>
+<p class="italic text-sm mb-2"><%= @article.author %></p>
+<p class="mb-4"><%= @article.body %></p>
 
-<h2>Comments</h2>
-<% @article.comments.each do |comment| %>
-  <p>
-    <strong>Commenter:</strong>
-    <%= comment.commenter %>
-  </p>
+<div class="mb-4">
+  <h2 class="text-2xl">Comments</h2>
+  <%= render @article.comments %>
+  
+  <h2 class="text-xl">Add a comment:</h2>
+  <%= render 'comments/form' %>
+</div>
 
-  <p>
-    <strong>Comment:</strong>
-    <%= comment.body %>
-  </p>
-<% end %>
-
-<h2>Add a comment:</h2>
-<%= form_with model: [ @article, @article.comments.build ] do |form| %>
-  <p>
-    <%= form.label :commenter %><br>
-    <%= form.text_field :commenter %>
-  </p>
-  <p>
-    <%= form.label :body %><br>
-    <%= form.text_area :body %>
-  </p>
-  <p>
-    <%= form.submit %>
-  </p>
-<% end %>
-
-<ul class="flex">
-  <li class="pr-4"><%= link_to "Edit", edit_article_path(@article) %></li>
-  |
-  <li class="pl-4"><%= link_to "Destroy", article_path(@article), data: {
-                    turbo_method: :delete,
-                    turbo_confirm: "Are you sure?"
-                  } %></li>
-</ul>
