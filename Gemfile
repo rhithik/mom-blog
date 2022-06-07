@@ -76,3 +76,7 @@ gem "sassc-rails"
 gem "devise"
 
 gem "tailwindcss-rails", "~> 2.0"
+
+gem 'rich'
+gem 'paperclip'
+gem 'carrierwave'

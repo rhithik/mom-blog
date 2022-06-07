@@ -1,12 +1,14 @@
-<h1 class="text-3xl font-bold">Keespakes</h1>
-
-<ul class="mt-4">
-  <% @articles.each do |article| %>
-    <% unless article.archived? %>
-      <li class="mb-2 font-semibold">
-        <%= link_to article.title, article %>
-      </li>
+<div class="">
+  <h1 class="text-3xl font-bold">Keespakes</h1>
+  
+  <ul class="mt-4">
+    <% @articles.each do |article| %>
+      <% unless article.archived? %>
+        <li class="mb-2 font-semibold">
+          <%= link_to article.title, article %>
+        </li>
+      <% end %>
     <% end %>
-  <% end %>
-</ul>
+  </ul>
+</div>
 
