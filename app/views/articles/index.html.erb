@@ -1,12 +1,12 @@
-<div class="">
+<div class="mt-10">
   <h1 class="text-3xl font-bold">Keespakes</h1>
   
-  <ul class="mt-4 border-2 border-gray-500 rounded">
+  <ul class="px-10 py-6 mt-4 border-2 border-gray-500 rounded">
     <% @articles.each do |article| %>
       <% unless article.archived? %>
-        <li class="mb-2 font-semibold">
+        <li class="mb-2 text-xl font-semibold">
           <%= link_to article.title, article %>
-          <p><%= article.author %></p>
+          <p class="mt-2 text-sm italic font-normal"><%= article.author %></p>
         </li>
         </li>
       <% end %>

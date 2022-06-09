@@ -1,8 +1,8 @@
-<h2 class="mb-2 text-2xl font-bold"><%= @article.title %></h2>
+<h2 class="mt-8 mb-2 text-2xl font-bold"><%= @article.title %></h2>
 <p class="mb-2 text-sm italic"><%= @article.author %></p>
 <p class="mb-4"><%= @article.body %></p>
 
-<div class="p-10 my-8 border-2 border-slate-800">
+<div class="p-10 my-8 border-2 rounded-lg border-slate-800">
     <h2 class="text-xl">Comments</h2>
     <%= render @article.comments %>
     
