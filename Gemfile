@@ -72,7 +72,8 @@ group :test do
 end
 
 gem 'rails_admin', '~> 3.0'
-gem "sassc-rails"
 gem "devise"
 
 gem "tailwindcss-rails", "~> 2.0"
+
+gem "cssbundling-rails", "~> 1.1"
