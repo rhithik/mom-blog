@@ -71,9 +71,12 @@ group :test do
   gem "webdrivers"
 end
 
-gem 'rails_admin', '~> 3.0'
-gem "devise"
 
 gem "tailwindcss-rails", "~> 2.0"
 
 gem "cssbundling-rails", "~> 1.1"
+
+gem "dartsass-rails", "~> 0.3.0"
+
+
+gem "devise", "~> 4.8"
